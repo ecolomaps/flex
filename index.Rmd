@@ -1,0 +1,36 @@
+---
+title: "Hello World !"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+plot(mtcars$mpg,mtcars$qsec)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+hist(mtcars$mpg)
+```
+
+### Chart C
+
+```{r}
+boxplot(mtcars$mpg,horizontal = T)
+```
+
